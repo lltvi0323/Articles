@@ -1,6 +1,7 @@
 <template>
   <v-row justify="center">
     <v-dialog
+      data-app
       v-model="dialog"
       persistent
       max-width="290"

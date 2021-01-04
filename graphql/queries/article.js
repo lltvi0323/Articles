@@ -1,10 +1,13 @@
 import gql from "graphql-tag";
 
-export const getDealsWithFilter = gql`
-  query($filter: FilterDealTable) {
-    filterDeals: get_deals(filter: $filter) {
+export const getArticles = gql`
+  query {
+    articles: get_articles {
       id
-      is_hot
+      title
+      url
+      content
+      created_at
     }
   }
 `;

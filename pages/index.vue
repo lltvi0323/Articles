@@ -1,24 +1,11 @@
 <template>
-  <div class="container">
-    <h1>Thực hiện thêm sửa xóa bài viết</h1>
-     <ArticleForm />
-     <Article />
-  </div>
+  <h1>Index page</h1>
 </template>
 
 <script>
-import ArticleForm from "@/components/ArticleForm";
-import Article from "./Article";
-export default {
-    components: {
-    ArticleForm,
-    Article
+  export default {
+    middleware({ store, redirect }) {
+        return redirect('/article')
+    }
   }
-}
 </script>
-
-<style scoped>
-.container h1 {
-  text-align: center;
-}
-</style>
